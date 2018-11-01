@@ -1,0 +1,22 @@
+{
+  "name": "tiny-dash",
+  "version": "1.0.0",
+  "description": "Functional utilities from native js ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chmelevskij/tiny-dash.git"
+  },
+  "keywords": [
+    "fp"
+  ],
+  "author": "T.Chmelevskij",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chmelevskij/tiny-dash/issues"
+  },
+  "homepage": "https://github.com/chmelevskij/tiny-dash#readme"
+}
