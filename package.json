@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Functional utilities from native js ",
   "main": "./lib/index.mjs",
+  "engines" : { "node" : ">=10.0.0" },
   "scripts": {
     "test": "node --experimental-modules index.test.mjs"
   },
