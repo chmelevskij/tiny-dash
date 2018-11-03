@@ -6,6 +6,8 @@ const curry = (f, arr=[]) => (
     )([...arr, ...args])
 );
 const pipe = (...os) => os.reduce((f, g) => x => g(f(x)))
+const compose = (...os) => os.reduceRight((f, g) => x => g(f(x)))
+
 const T = [
   'concat',
   'entries',
@@ -25,13 +27,14 @@ const T = [
   'some',
   'sort',
   'values',
-].reduce((acc, method) => ({
-    ...acc,
-    [method]: curry((f, arr) => Array.prototype[method].call(arr, f))
-}), {});
+].reduce((acc, method) => {
+  acc[method] = curry((f, arr) => Array.prototype[method].call(arr, f));
+  return acc;
+}, {});
 
 T.pipe = pipe;
 T.curry = curry;
+T.compose = compose;
 
 export default T;
 
